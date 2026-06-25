@@ -6,6 +6,27 @@ from mcp.server.fastmcp import FastMCP
 
 mcp = FastMCP("tools-server")
 
+TOOLS = [
+  {
+    "name": "calculator",
+    "description": "Evaluates a mathematical expression",
+    "input_schema": {
+      "type": "object",
+      "properties": { "expression": { "type": "string" } },
+      "required": ["expression"]
+    }
+  },
+    {
+    "name": "web_search",
+    "description": "Performs a web search and returns relevant results",
+    "input_schema": {
+      "type": "object",
+      "properties": { "query": { "type": "string" } },
+      "required": ["query"]
+    }
+  }
+]
+
 # ---------------------------------------------------------------------------
 # Calculator
 # ---------------------------------------------------------------------------
